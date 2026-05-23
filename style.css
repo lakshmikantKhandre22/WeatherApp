@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#0c596f,#420b18);
+
+    padding:20px;
+}
+
+/* Container */
+
+.container{
+    width:100%;
+
+    max-width:420px;
+}
+
+/* Weather Card */
+
+.weather-card{
+    background:rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Heading */
+
+.weather-card h1{
+    margin-bottom:25px;
+
+    font-size:2rem;
+}
+
+/* Search Box */
+
+.search-box{
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:30px;
+}
+
+.search-box input{
+    flex:1;
+
+    padding:14px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,0.15);
+
+    color:white;
+
+    font-size:1rem;
+}
+
+.search-box input::placeholder{
+    color:#ddd;
+}
+
+.search-box button{
+    padding:14px 18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#2563eb;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:0.3s ease;
+}
+
+.search-box button:hover{
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+}
+
+/* Weather Info */
+
+.weather-info img{
+    width:120px;
+
+    margin-bottom:15px;
+}
+
+.weather-info h2{
+    font-size:3rem;
+
+    margin-bottom:10px;
+}
+
+.weather-info h3{
+    font-size:1.7rem;
+
+    margin-bottom:8px;
+}
+
+.weather-info p{
+    font-size:1rem;
+
+    color:#ddd;
+}
+
+/* Details */
+
+.details{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-top:30px;
+}
+
+.detail-box{
+    flex:1;
+
+    background:rgba(255,255,255,0.12);
+
+    padding:18px;
+
+    border-radius:16px;
+}
+
+.detail-box h4{
+    margin-bottom:10px;
+
+    font-size:1rem;
+}
+
+.detail-box p{
+    font-size:1.2rem;
+
+    font-weight:600;
+
+    color:white;
+}
+
+/* Responsive */
+
+@media(max-width:500px){
+
+    .weather-card{
+        padding:22px;
+    }
+
+    .search-box{
+        flex-direction:column;
+    }
+
+    .search-box button{
+        width:100%;
+    }
+
+    .details{
+        flex-direction:column;
+    }
+
+    .weather-info h2{
+        font-size:2.5rem;
+    }
+
+    .weather-info h3{
+        font-size:1.4rem;
+    }
+}
